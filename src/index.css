@@ -1,0 +1,161 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1a202c; /* Dark background */
+      color: #edf2f7; /* Light text */
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Card Styles */
+    .card {
+      background-color: #2d3748; /* Dark card background */
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Darker shadow */
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Darker hover shadow */
+    }
+
+    .card-header {
+      padding: 15px;
+      border-bottom: 1px solid #4a5568; /* Darker border */
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #edf2f7; /* Light text */
+      text-align: center;
+    }
+
+    .card-description {
+      font-size: 1rem;
+      color: #a0aec0; /* Lighter text */
+    }
+
+    .card-content {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Button Styles */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #4299e1; /* Blue button */
+      color: #edf2f7; /* Light text */
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #2b6cb0; /* Darker blue hover */
+    }
+
+    .button:disabled {
+      background-color: #718096; /* Gray disabled */
+      cursor: not-allowed;
+    }
+
+    /* Input Styles */
+    .input {
+      padding: 10px;
+      border: 1px solid #4a5568; /* Darker border */
+      border-radius: 5px;
+      background-color: #2d3748; /* Dark input background */
+      color: #edf2f7; /* Light text */
+      transition: border-color 0.3s ease;
+    }
+
+    .input:focus {
+      border-color: #4299e1; /* Blue focus border */
+      outline: none;
+    }
+
+    /* Table Styles */
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .table-caption {
+      font-size: 0.9rem;
+      color: #a0aec0; /* Lighter text */
+      text-align: left;
+      margin-bottom: 5px;
+    }
+
+    .table-header th {
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid #4a5568; /* Darker border */
+      color: #edf2f7; /* Light text */
+    }
+
+    .table-body td {
+      padding: 10px;
+      border-bottom: 1px solid #4a5568; /* Darker border */
+      color: #a0aec0; /* Lighter text */
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+      .card-title {
+        font-size: 1rem;
+      }
+      .card-description {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .animate-slide-up {
+      animation: slideUp 0.3s ease-in-out;
+    }
